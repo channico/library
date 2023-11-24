@@ -97,7 +97,7 @@ SET NEW.return_date = IF(NEW.return_date IS NULL, NOW(), NEW.return_date);
 Please remember to create and use any necessary tables, procedures, or triggers in the database to answer these questions
 
 ## Appendix
-Schema DDL
+### Schema DDL
 ~~~~sql
 CREATE TABLE books (
     book_id INT PRIMARY KEY,
@@ -124,4 +124,34 @@ CREATE TABLE borrowed_books (
     FOREIGN KEY (user_id) REFERENCES users(user_id),
     FOREIGN KEY (book_id) REFERENCES books(book_id)
 );
+~~~~
+
+### Sample Data
+~~~~sql
+-- Inserting data into the books table
+INSERT INTO books (book_id, title, author, publication_year, isbn)
+VALUES
+    (1, 'The Great Gatsby', 'F. Scott Fitzgerald', 1925, '978-0743273565'),
+    (2, 'To Kill a Mockingbird', 'Harper Lee', 1960, '978-0061120084'),
+    (3, '1984', 'George Orwell', 1949, '978-0451524935'),
+    (4, 'The Catcher in the Rye', 'J.D. Salinger', 1951, '978-0241950425'),
+    (5, 'Harry Potter and the Sorcerer''s Stone', 'J.K. Rowling', 1997, '978-0590353427');
+
+-- Inserting data into the users table
+INSERT INTO users (user_id, first_name, last_name, email, registration_date)
+VALUES
+    (1, 'John', 'Doe', 'john.doe@example.com', '2023-01-01'),
+    (2, 'Jane', 'Smith', 'jane.smith@example.com', '2023-02-15'),
+    (3, 'Robert', 'Johnson', 'robert.johnson@example.com', '2023-03-20'),
+    (4, 'Alice', 'Williams', 'alice.williams@example.com', '2023-04-10');
+
+-- Inserting data into the borrowed_books table
+INSERT INTO borrowed_books (borrow_id, user_id, book_id, borrow_date, return_date)
+VALUES
+    (1, 1, 1, '2023-01-10', '2023-02-05'),
+    (2, 2, 3, '2023-02-20', NULL),
+    (3, 3, 5, '2023-03-05', '2023-04-01'),
+    (4, 1, 2, '2023-04-15', NULL),
+    (5, 4, 4, '2023-05-01', NULL);
+
 ~~~~
