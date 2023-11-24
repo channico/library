@@ -48,3 +48,33 @@ You will be working with a database that models a library. Here are the relevant
 7. Create a trigger that automatically updates the return_date in the borrowed_books table to the current date when a book is returned.
 
 8. Please remember to create and use any necessary tables, procedures, or triggers in the database to answer these questions
+
+## Appendix
+Schema DDL
+~~~~sql
+CREATE TABLE books (
+    book_id INT PRIMARY KEY,
+    title VARCHAR(255),
+    author VARCHAR(255),
+    publication_year INT,
+    isbn VARCHAR(20)
+);
+
+CREATE TABLE users (
+    user_id INT PRIMARY KEY,
+    first_name VARCHAR(255),
+    last_name VARCHAR(255),
+    email VARCHAR(255),
+    registration_date DATE
+);
+
+CREATE TABLE borrowed_books (
+    borrow_id INT PRIMARY KEY,
+    user_id INT,
+    book_id INT,
+    borrow_date DATE,
+    return_date DATE,
+    FOREIGN KEY (user_id) REFERENCES users(user_id),
+    FOREIGN KEY (book_id) REFERENCES books(book_id)
+);
+~~~~
