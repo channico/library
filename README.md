@@ -93,6 +93,12 @@ BEFORE UPDATE ON borrowed_books
 FOR EACH ROW
 SET NEW.return_date = IF(NEW.return_date IS NULL, NOW(), NEW.return_date);
 ~~~~
+To test it just update the returne date with NULL, e.g.:
+~~~~sql
+UPDATE borrowed_books
+SET return_date = NULL
+WHERE borrow_id=4
+~~~~
 
 Please remember to create and use any necessary tables, procedures, or triggers in the database to answer these questions
 
@@ -182,3 +188,14 @@ VALUES
     (6, 3, 29, '2023-06-01', NULL);
 
 ~~~~
+
+### Issues Faced
+
+#### Encountered issues when using Amazon RDS MySQL database:
+```
+You do not have the SUPER privilege and binary logging is enabled 
+(you *might* want to use  the less safe log_bin_trust_function_creators variable)
+```
+Issue was resolved by changing a DB Parameter group log_bin_trust_function_creators=1 using the 
+following instructions https://repost.aws/knowledge-center/rds-mysql-functions
+
