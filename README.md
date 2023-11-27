@@ -31,6 +31,10 @@ You will be working with a database that models a library. Here are the relevant
   - borrow_date
   - return_date.
 
+### Schema Diagram
+
+![Library Scheme](library_schema.png "Library ERD Diagram")
+
 ## Test Questions:
 
 1. Write a SQL query to retrieve the top 10 most borrowed books, along with the number of times each book has been borrowed.
