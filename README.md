@@ -145,7 +145,7 @@ VALUES
     (2, 'To Kill a Mockingbird', 'Harper Lee', 1960, '978-0061120084'),
     (3, '1984', 'George Orwell', 1949, '978-0451524935'),
     (4, 'The Catcher in the Rye', 'J.D. Salinger', 1951, '978-0241950425'),
-    (5, 'Harry Potter and the Sorcerer''s Stone', 'J.K. Rowling', 1997, '978-0590353427');
+    (5, 'Harry Potter and the Sorcerer''s Stone', 'J.K. Rowling', 1997, '978-0590353427'),
     (6, 'The Lord of the Rings', 'J.R.R. Tolkien', 1954, '978-0545010221'),
     (7, 'Pride and Prejudice', 'Jane Austen', 1813, '978-0141439518'),
     (8, 'The Hobbit', 'J.R.R. Tolkien', 1937, '978-0345339683'),
@@ -160,13 +160,13 @@ VALUES
     (17, 'The Hunger Games', 'Suzanne Collins', 2008, '978-0439023481'),
     (18, 'The Chronicles of Narnia', 'C.S. Lewis', 1950, '978-0061120084'),
     (19, 'The Girl with the Dragon Tattoo', 'Stieg Larsson', 2005, '978-0307454546'),
-    (20, 'Moby-Dick', 'Herman Melville', 1851, '978-0142437247');
+    (20, 'Moby-Dick', 'Herman Melville', 1851, '978-0142437247'),
     (21, 'Harry Potter and the Chamber of Secrets', 'J.K. Rowling', 1998, '978-0439064866'),
     (22, 'Harry Potter and the Prisoner of Azkaban', 'J.K. Rowling', 1999, '978-0439136358'),
     (23, 'Harry Potter and the Goblet of Fire', 'J.K. Rowling', 2000, '978-0439139595'),
     (24, 'Harry Potter and the Order of the Phoenix', 'J.K. Rowling', 2003, '978-0439358071'),
     (25, 'Harry Potter and the Half-Blood Prince', 'J.K. Rowling', 2005, '978-0439785969'),
-    (26, 'Harry Potter and the Deathly Hallows', 'J.K. Rowling', 2007, '978-0545010221');
+    (26, 'Harry Potter and the Deathly Hallows', 'J.K. Rowling', 2007, '978-0545010221'),
     (27, 'The Vanishing Half', 'Brit Bennett', 2020, '978-0525536291'),
     (28, 'Such a Fun Age', 'Kiley Reid', 2020, '978-0525541905'),
     (29, 'A Promised Land', 'Barack Obama', 2020, '978-1524763169'),
@@ -188,7 +188,7 @@ VALUES
     (2, 2, 3, '2023-02-20', NULL),
     (3, 3, 5, '2023-03-05', '2023-04-01'),
     (4, 1, 2, '2023-04-15', NULL),
-    (5, 4, 4, '2023-05-01', NULL);
+    (5, 4, 4, '2023-05-01', NULL),
     (6, 3, 29, '2023-06-01', NULL);
 
 ~~~~
